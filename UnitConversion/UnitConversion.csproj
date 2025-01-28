@@ -4,6 +4,14 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>UnitConversion</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>YourName</Authors>
+    <Company>YourCompanyName</Company>
+    <Description>A .NET library for converting between units of measurement such as length, temperature, volume, speed, and more.</Description>
+    <PackageTags>Units Conversion Length Temperature Volume Speed</PackageTags>
+    <Copyright>Copyright © 2025 John Hird</Copyright>
+    <RepositoryUrl>https://github.com/Treebion/UnitConversion</RepositoryUrl>
   </PropertyGroup>
-
 </Project>

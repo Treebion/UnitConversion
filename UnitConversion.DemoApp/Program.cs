@@ -10,17 +10,21 @@ internal class Program
         DemoLength();
         DemoSpeed();
         DemoTemperature();
-        Chain();
+        DemoWeight();
 
         Console.ReadLine();
     }
 
-    private static void Chain()
+    private static void DemoWeight()
     {
-        var miles = new Length(100, LengthUnit.Miles);
-        var kilometres = miles
-            .To(LengthUnit.Metres)
-            .To(LengthUnit.Kilometres);
+        var lb = new Weight(1, WeightUnit.Pounds);
+        var oz = lb.To(WeightUnit.Ounces);
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Length Conversions");
+        Console.ResetColor();
+        Console.WriteLine($"{lb} = {oz}");
+        Console.WriteLine();
     }
 
     private static void DemoLength()
