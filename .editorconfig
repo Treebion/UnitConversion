@@ -1,0 +1,9 @@
+# Remove unnecessary usings
+dotnet_remove_unnecessary_imports = true
+
+# Sort usings
+csharp_using_directive_placement = outside_namespace
+
+# Indentation and spacing
+indent_size = 4
+tab_width = 4
