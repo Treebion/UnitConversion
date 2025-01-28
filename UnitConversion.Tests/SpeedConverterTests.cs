@@ -38,7 +38,7 @@ public class SpeedConverterTests
         const double tolerance = 0.001;
 
         // Act
-        var speed = new Speed(inputValue,  inputUnit)
+        var speed = new Speed(inputValue, inputUnit)
             .To(outputUnit);
 
         // Arrange

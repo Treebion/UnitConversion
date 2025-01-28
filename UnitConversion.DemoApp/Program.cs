@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-using UnitConversion.ConversionEnums;
+﻿using UnitConversion.ConversionEnums;
 
 namespace UnitConversion.DemoApp;
 
@@ -11,8 +10,21 @@ internal class Program
         DemoSpeed();
         DemoTemperature();
         DemoWeight();
+        DemoArea();
 
         Console.ReadLine();
+    }
+
+    private static void DemoArea()
+    {
+        var sqm = new Area(1000, AreaUnit.SquareMetres);
+        var acr = sqm.To(AreaUnit.Acres);
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Length Conversions");
+        Console.ResetColor();
+        Console.WriteLine($"{sqm} = {acr}");
+        Console.WriteLine();
     }
 
     private static void DemoWeight()
@@ -28,7 +40,7 @@ internal class Program
     }
 
     private static void DemoLength()
-    {        
+    {
         var miles = new Length(100, LengthUnit.Miles);
         var kilometres = miles.To(LengthUnit.Kilometres);
 
