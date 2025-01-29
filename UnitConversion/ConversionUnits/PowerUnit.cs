@@ -1,4 +1,4 @@
-﻿namespace UnitConversion.ConversionEnums;
+﻿namespace UnitConversion.ConversionUnits;
 
 public enum PowerUnit
 {

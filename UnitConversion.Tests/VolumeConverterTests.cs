@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 using FluentAssertions.Execution;
-using UnitConversion.ConversionEnums;
+using UnitConversion.ConversionUnits;
 
 namespace UnitConversion.Tests;
 

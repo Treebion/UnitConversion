@@ -1,4 +1,4 @@
-﻿using UnitConversion.ConversionEnums;
+﻿using UnitConversion.ConversionUnits;
 
 namespace UnitConversion;
 
@@ -31,7 +31,7 @@ public class Power : IUnitConverter<PowerUnit, Power>
         {
             return new Power(_value, targetUnit);
         }
-        
+
         var valueInWatt = _value * ToWattFactor[_unit];
 
         var convertedValue = valueInWatt / ToWattFactor[targetUnit];

@@ -1,4 +1,4 @@
-﻿using UnitConversion.ConversionEnums;
+﻿using UnitConversion.ConversionUnits;
 
 namespace UnitConversion.DemoApp;
 
@@ -13,8 +13,34 @@ internal class Program
         DemoArea();
         DemoEnergy();
         DemoPower();
+        DemoPressure();
+        DemoData();
 
         Console.ReadLine();
+    }
+
+    private static void DemoData()
+    {
+        var mb = new Data(2048, DataUnit.Megabyte);
+        var gb = mb.To(DataUnit.Gigabyte);
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Data Conversions");
+        Console.ResetColor();
+        Console.WriteLine($"{mb} = {gb}");
+        Console.WriteLine();
+    }
+
+    private static void DemoPressure()
+    {
+        var bar = new Pressure(2, PressureUnit.Bar);
+        var psi = bar.To(PressureUnit.PSI);
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Pressure Conversions");
+        Console.ResetColor();
+        Console.WriteLine($"{bar} = {psi}");
+        Console.WriteLine();
     }
 
     private static void DemoPower()
