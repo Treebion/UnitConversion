@@ -5,13 +5,22 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>UnitConversion</PackageId>
+
+    <PackageId>Treebion.UnitConversion</PackageId>
     <Version>1.0.0</Version>
-    <Authors>YourName</Authors>
-    <Company>YourCompanyName</Company>
+    <Authors>John Hird</Authors>
     <Description>A .NET library for converting between units of measurement such as length, temperature, volume, speed, and more.</Description>
-    <PackageTags>Units Conversion Length Temperature Volume Speed</PackageTags>
+    <PackageTags>Units Conversion Volume Weight Area Data Energy Length Power Pressure Speed Temperature</PackageTags>
     <Copyright>Copyright © 2025 John Hird</Copyright>
+
+    <!-- 🔹 README & License -->
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <!-- 🔹 Repository Info -->
     <RepositoryUrl>https://github.com/Treebion/UnitConversion</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
   </PropertyGroup>
+
 </Project>
