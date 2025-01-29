@@ -11,8 +11,34 @@ internal class Program
         DemoTemperature();
         DemoWeight();
         DemoArea();
+        DemoEnergy();
+        DemoPower();
 
         Console.ReadLine();
+    }
+
+    private static void DemoPower()
+    {
+        var hp = new Power(100, PowerUnit.Horsepower);
+        var kw = hp.To(PowerUnit.Kilowatt);
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Power Conversions");
+        Console.ResetColor();
+        Console.WriteLine($"{hp} = {kw}");
+        Console.WriteLine();
+    }
+
+    private static void DemoEnergy()
+    {
+        var kwh = new Energy(10, EnergyUnit.KilowattHours);
+        var cal = kwh.To(EnergyUnit.Calories);
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Energy Conversions");
+        Console.ResetColor();
+        Console.WriteLine($"{kwh} = {cal}");
+        Console.WriteLine();
     }
 
     private static void DemoArea()
@@ -21,7 +47,7 @@ internal class Program
         var acr = sqm.To(AreaUnit.Acres);
 
         Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("Length Conversions");
+        Console.WriteLine("Area Conversions");
         Console.ResetColor();
         Console.WriteLine($"{sqm} = {acr}");
         Console.WriteLine();
