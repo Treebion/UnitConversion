@@ -1,9 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using System.Collections.Generic;
-
-namespace UnitConversion.DemoApp;
+﻿namespace UnitConversion.DemoApp;
 
 public static class UnitConverterHelper
 {

@@ -2,6 +2,9 @@
 
 namespace UnitConversion;
 
+/// <summary>
+/// Represents an area and provides methods for converting between different area units.
+/// </summary>
 public class Area : IUnitConverter<AreaUnit, Area>
 {
     private readonly double _value;
@@ -21,15 +24,32 @@ public class Area : IUnitConverter<AreaUnit, Area>
         { AreaUnit.Hectares, 10_000.0 }
     };
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Area"/> class with the specified value and unit.
+    /// </summary>
+    /// <param name="value">The numerical value of the area.</param>
+    /// <param name="unit">The unit of the area.</param>
     public Area(double value, AreaUnit unit)
     {
         _value = value;
         _unit = unit;
     }
 
+    /// <summary>
+    /// Gets the numerical value of the area.
+    /// </summary>
     public double Value => _value;
+
+    /// <summary>
+    /// Gets the unit of the area.
+    /// </summary>
     public AreaUnit Unit => _unit;
 
+    /// <summary>
+    /// Converts the area to the specified target unit.
+    /// </summary>
+    /// <param name="targetUnit">The target unit to convert to.</param>
+    /// <returns>A new <see cref="Area"/> instance representing the converted value in the target unit.</returns>
     public Area To(AreaUnit targetUnit)
     {
         if (_unit == targetUnit)
@@ -45,6 +65,10 @@ public class Area : IUnitConverter<AreaUnit, Area>
         return new Area(convertedValue, targetUnit);
     }
 
+    /// <summary>
+    /// Returns a string representation of the area.
+    /// </summary>
+    /// <returns>A string that represents the area.</returns>
     public override string ToString()
     {
         return $"{_value} {_unit}";

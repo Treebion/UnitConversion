@@ -1,11 +1,9 @@
-﻿using UnitConversion.ConversionUnits;
-
-namespace UnitConversion.DemoApp;
+﻿namespace UnitConversion.DemoApp;
 
 internal class Program
 {
     static void Main(string[] args)
     {
         UnitConverterHelper.Run();
-    }    
+    }
 }

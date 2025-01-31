@@ -2,6 +2,9 @@
 
 namespace UnitConversion;
 
+/// <summary>
+/// Represents a length value and provides methods for converting between different length units.
+/// </summary>
 public class Length : IUnitConverter<LengthUnit, Length>
 {
     private readonly double _value;
@@ -18,15 +21,32 @@ public class Length : IUnitConverter<LengthUnit, Length>
         { LengthUnit.Millimetres, 0.001 }
     };
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Length"/> class with the specified value and unit.
+    /// </summary>
+    /// <param name="value">The numerical value of the length.</param>
+    /// <param name="fromUnit">The unit of the length.</param>
     public Length(double value, LengthUnit fromUnit)
     {
         _value = value;
         _unit = fromUnit;
     }
 
+    /// <summary>
+    /// Gets the numerical value of the length.
+    /// </summary>
     public double Value => _value;
+
+    /// <summary>
+    /// Gets the unit of the length.
+    /// </summary>
     public LengthUnit Unit => _unit;
 
+    /// <summary>
+    /// Converts the length to the specified target unit.
+    /// </summary>
+    /// <param name="targetUnit">The target unit to convert to.</param>
+    /// <returns>A new <see cref="Length"/> instance representing the converted value in the target unit.</returns>
     public Length To(LengthUnit targetUnit)
     {
         if (_unit == targetUnit)
@@ -40,6 +60,10 @@ public class Length : IUnitConverter<LengthUnit, Length>
         return new Length(convertedValue, targetUnit);
     }
 
+    /// <summary>
+    /// Returns a string representation of the length.
+    /// </summary>
+    /// <returns>A string that represents the length.</returns>
     public override string ToString()
     {
         return $"{_value} {_unit}";

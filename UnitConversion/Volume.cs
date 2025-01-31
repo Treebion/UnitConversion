@@ -2,6 +2,9 @@
 
 namespace UnitConversion;
 
+/// <summary>
+/// Represents a volume value and provides methods for converting between different volume units.
+/// </summary>
 public class Volume : IUnitConverter<VolumeUnit, Volume>
 {
     private readonly double _value;
@@ -30,14 +33,32 @@ public class Volume : IUnitConverter<VolumeUnit, Volume>
         { VolumeUnit.CubicInch, 0.0163871 }
     };
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Volume"/> class with the specified value and unit.
+    /// </summary>
+    /// <param name="value">The numerical value of the volume.</param>
+    /// <param name="fromUnit">The unit of the volume.</param>
     public Volume(double value, VolumeUnit fromUnit)
     {
         _value = value;
         _unit = fromUnit;
     }
+
+    /// <summary>
+    /// Gets the numerical value of the volume.
+    /// </summary>
     public double Value => _value;
+
+    /// <summary>
+    /// Gets the unit of the volume.
+    /// </summary>
     public VolumeUnit Unit => _unit;
 
+    /// <summary>
+    /// Converts the volume to the specified target unit.
+    /// </summary>
+    /// <param name="targetUnit">The target unit to convert to.</param>
+    /// <returns>A new <see cref="Volume"/> instance representing the converted value in the target unit.</returns>
     public Volume To(VolumeUnit targetUnit)
     {
         if (_unit == targetUnit)
@@ -53,6 +74,10 @@ public class Volume : IUnitConverter<VolumeUnit, Volume>
         return new Volume(convertedValue, targetUnit);
     }
 
+    /// <summary>
+    /// Returns a string representation of the volume.
+    /// </summary>
+    /// <returns>A string that represents the volume.</returns>
     public override string ToString()
     {
         return $"{_value} {_unit}";

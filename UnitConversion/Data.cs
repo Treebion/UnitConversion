@@ -2,6 +2,9 @@
 
 namespace UnitConversion;
 
+/// <summary>
+/// Represents a data size and provides methods for converting between different data units.
+/// </summary>
 public class Data : IUnitConverter<DataUnit, Data>
 {
     private readonly double _value;
@@ -18,15 +21,32 @@ public class Data : IUnitConverter<DataUnit, Data>
         { DataUnit.Petabyte, 1024.0 * 1024.0 * 1024.0 * 1024.0 * 1024.0 }
     };
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Data"/> class with the specified value and unit.
+    /// </summary>
+    /// <param name="value">The numerical value of the data size.</param>
+    /// <param name="unit">The unit of the data size.</param>
     public Data(double value, DataUnit unit)
     {
         _value = value;
         _unit = unit;
     }
 
+    /// <summary>
+    /// Gets the numerical value of the data size.
+    /// </summary>
     public double Value => _value;
+
+    /// <summary>
+    /// Gets the unit of the data size.
+    /// </summary>
     public DataUnit Unit => _unit;
 
+    /// <summary>
+    /// Converts the data size to the specified target unit.
+    /// </summary>
+    /// <param name="targetUnit">The target unit to convert to.</param>
+    /// <returns>A new <see cref="Data"/> instance representing the converted value in the target unit.</returns>
     public Data To(DataUnit targetUnit)
     {
         if (_unit == targetUnit)
@@ -42,6 +62,10 @@ public class Data : IUnitConverter<DataUnit, Data>
         return new Data(convertedValue, targetUnit);
     }
 
+    /// <summary>
+    /// Returns a string representation of the data size.
+    /// </summary>
+    /// <returns>A string that represents the data size.</returns>
     public override string ToString()
     {
         return $"{_value} {Unit}";

@@ -2,6 +2,9 @@
 
 namespace UnitConversion;
 
+/// <summary>
+/// Represents a speed value and provides methods for converting between different speed units.
+/// </summary>
 public class Speed : IUnitConverter<SpeedUnit, Speed>
 {
     private readonly double _value;
@@ -16,15 +19,32 @@ public class Speed : IUnitConverter<SpeedUnit, Speed>
         { SpeedUnit.FeetPerSecond, 0.3048 }
     };
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Speed"/> class with the specified value and unit.
+    /// </summary>
+    /// <param name="value">The numerical value of the speed.</param>
+    /// <param name="unit">The unit of the speed.</param>
     public Speed(double value, SpeedUnit unit)
     {
         _value = value;
         _unit = unit;
     }
 
+    /// <summary>
+    /// Gets the numerical value of the speed.
+    /// </summary>
     public double Value => _value;
+
+    /// <summary>
+    /// Gets the unit of the speed.
+    /// </summary>
     public SpeedUnit Unit => _unit;
 
+    /// <summary>
+    /// Converts the speed to the specified target unit.
+    /// </summary>
+    /// <param name="targetUnit">The target unit to convert to.</param>
+    /// <returns>A new <see cref="Speed"/> instance representing the converted value in the target unit.</returns>
     public Speed To(SpeedUnit targetUnit)
     {
         if (_unit == targetUnit)
@@ -40,6 +60,10 @@ public class Speed : IUnitConverter<SpeedUnit, Speed>
         return new Speed(convertedValue, targetUnit);
     }
 
+    /// <summary>
+    /// Returns a string representation of the speed.
+    /// </summary>
+    /// <returns>A string that represents the speed.</returns>
     public override string ToString()
     {
         return $"{_value} {Unit}";

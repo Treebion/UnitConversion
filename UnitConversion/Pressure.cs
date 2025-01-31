@@ -2,6 +2,9 @@
 
 namespace UnitConversion;
 
+/// <summary>
+/// Represents a pressure value and provides methods for converting between different pressure units.
+/// </summary>
 public class Pressure : IUnitConverter<PressureUnit, Pressure>
 {
     private readonly double _value;
@@ -18,15 +21,32 @@ public class Pressure : IUnitConverter<PressureUnit, Pressure>
         { PressureUnit.Millibar, 100.0 }
     };
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Pressure"/> class with the specified value and unit.
+    /// </summary>
+    /// <param name="value">The numerical value of the pressure.</param>
+    /// <param name="unit">The unit of the pressure.</param>
     public Pressure(double value, PressureUnit unit)
     {
         _value = value;
         _unit = unit;
     }
 
+    /// <summary>
+    /// Gets the numerical value of the pressure.
+    /// </summary>
     public double Value => _value;
+
+    /// <summary>
+    /// Gets the unit of the pressure.
+    /// </summary>
     public PressureUnit Unit => _unit;
 
+    /// <summary>
+    /// Converts the pressure to the specified target unit.
+    /// </summary>
+    /// <param name="targetUnit">The target unit to convert to.</param>
+    /// <returns>A new <see cref="Pressure"/> instance representing the converted value in the target unit.</returns>
     public Pressure To(PressureUnit targetUnit)
     {
         if (_unit == targetUnit)
@@ -42,6 +62,10 @@ public class Pressure : IUnitConverter<PressureUnit, Pressure>
         return new Pressure(convertedValue, targetUnit);
     }
 
+    /// <summary>
+    /// Returns a string representation of the pressure.
+    /// </summary>
+    /// <returns>A string that represents the pressure.</returns>
     public override string ToString()
     {
         return $"{_value} {Unit}";
