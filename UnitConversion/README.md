@@ -1,7 +1,7 @@
 # **UnitConversion 📏⚡**
 *A .NET library for converting between units of measurement such as length, temperature, volume, speed, and more.*
 
-[![NuGet](https://img.shields.io/nuget/v/UnitConversion.svg)](https://www.nuget.org/packages/UnitConversion/)
+[![NuGet](https://img.shields.io/nuget/v/UnitConversion.svg)](https://www.nuget.org/packages/Treebion.UnitConversion/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ---
