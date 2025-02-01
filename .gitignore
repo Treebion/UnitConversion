@@ -10,3 +10,16 @@
 /UnitConversion.Tests/bin
 /UnitConversion.Tests/obj
 /.nugetkey
+/UnitConversion/bin/Release/net8.0/UnitConversion.deps.json
+/UnitConversion/bin/Release/net8.0/UnitConversion.dll
+/UnitConversion/bin/Release/net8.0/UnitConversion.pdb
+/UnitConversion/bin/Release/net8.0/UnitConversion.xml
+/UnitConversion/bin/Release/Treebion.UnitConversion.1.0.0.nupkg
+/UnitConversion/bin/Release/Treebion.UnitConversion.1.0.1.nupkg
+/UnitConversion.DemoApp/bin/Release/net8.0/UnitConversion.DemoApp.deps.json
+/UnitConversion.DemoApp/bin/Release/net8.0/UnitConversion.DemoApp.dll
+/UnitConversion.DemoApp/bin/Release/net8.0/UnitConversion.DemoApp.exe
+/UnitConversion.DemoApp/bin/Release/net8.0/UnitConversion.DemoApp.pdb
+/UnitConversion.DemoApp/bin/Release/net8.0/UnitConversion.dll
+/UnitConversion.DemoApp/bin/Release/net8.0/UnitConversion.pdb
+/UnitConversion.DemoApp/bin/Release/net8.0/UnitConversion.xml
