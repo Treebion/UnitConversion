@@ -11,12 +11,12 @@ You can install `UnitConversion` via **NuGet Package Manager** or **.NET CLI**:
 
 ### **Using .NET CLI**
 ```sh
-dotnet add package UnitConversion
+dotnet add package Treebion.UnitConversion
 ```
 
 ### **Using NuGet Package Manager**
 ```sh
-Install-Package UnitConversion
+Install-Package Treebion.UnitConversion
 ```
 
 ---
